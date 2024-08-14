@@ -1,6 +1,8 @@
 from __future__ import division
 
 import os
+# for mac
+os.environ["OMP_NUM_THREADS"] = "1"
 import random
 import numpy as np
 import argparse
@@ -69,7 +71,7 @@ def parse_args():
                         help='cancel strong augmentation.')
 
     # Model
-    parser.add_argument('-m', '--model', default='yolov1', type=str,
+    parser.add_argument('-m', '--model', default='yolov5_n', type=str,
                         help='build yolo')
     parser.add_argument('-ct', '--conf_thresh', default=0.001, type=float,
                         help='confidence threshold')
@@ -87,9 +89,9 @@ def parse_args():
                         help='Perform NMS operations regardless of category.')
 
     # Dataset
-    parser.add_argument('--root', default='/Users/liuhaoran/Desktop/python_work/object-detection/dataset/',
+    parser.add_argument('--root', default='/Users/nh/data/',
                         help='data root')
-    parser.add_argument('-d', '--dataset', default='coco',
+    parser.add_argument('-d', '--dataset', default='voc',
                         help='coco, voc, widerface, crowdhuman')
     parser.add_argument('--load_cache', action='store_true', default=False,
                         help='Path to the cached data.')

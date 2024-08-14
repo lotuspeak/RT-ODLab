@@ -10,7 +10,7 @@ def build_optimizer(cfg, model, resume=None):
 
     # ------------- Divide model's parameters -------------
     param_dicts = [], [], []
-    norm_names = ["norm"] + ["norm{}".format(i) for i in range(10000)]
+    norm_names = ["norm"] + ["norm{}".format(i) for i in range(10000)] # "bn"
     for n, p in model.named_parameters():
         if p.requires_grad:
             if "bias" == n.split(".")[-1]:

@@ -61,6 +61,8 @@ python dataset/voc.py
 For example:
 ```Shell
 python train.py --cuda -d voc --root path/to/VOCdevkit -m yolov1 -bs 16 --max_epoch 150 --wp_epoch 1 --eval_epoch 10 --fp16 --ema --multi_scale
+python train.py -d voc --root /Users/nh/data -m yolov1 -bs 16 --max_epoch 30 --wp_epoch 1 --eval_epoch 1
+python train.py -d voc --root /Users/nh/data -m yolov5_n -bs 16 --max_epoch 30 --wp_epoch 1 --eval_epoch 1
 ```
 
 ### COCO

@@ -19,6 +19,14 @@ conda activate rtcdet
 
 - 接着，配置环境:
 1. 首先安装基础环境
+
+
+------ MacOS ---------
+安装命令：
+    pip install opencv-python==4.5.4.60  -i https://pypi.tuna.tsinghua.edu.cn/simple/
+    pip install opencv-python-headless==4.5.4.60  -i https://pypi.tuna.tsinghua.edu.cn/simple/
+    pip install onnx==1.8.1  -i https://pypi.tuna.tsinghua.edu.cn/simple/
+
 ```Shell
 pip install -r requirements.txt 
 ```

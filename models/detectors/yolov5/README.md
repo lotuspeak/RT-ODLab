@@ -45,11 +45,16 @@ python eval.py --cuda -d coco --root path/to/coco -m yolov5_s --weight path/to/y
 ```Shell
 python demo.py --mode image --path_to_img path/to/image_dirs/ --cuda -m yolov5_s --weight path/to/yolov5_coco.pth  -size 640 --show
 ```
+python demo.py --mode image --path_to_img dataset/demo/images/ -m yolov5_s --weight weights/yolov5_s_coco_adamw.pth  -size 640 --show
+
 
 ### Detect with Video
 ```Shell
 python demo.py --mode video --path_to_vid path/to/video --cuda -m yolov5_s --weight path/to/yolov5_coco.pth  -size 640 --show --gif
 ```
+python demo.py --mode video --path_to_vid dataset/demo/videos/000006.mp4  -m yolov5_s --weight weights/yolov5_s_coco_adamw.pth -size 640 --show --gif
+
+python demo.py --mode video --path_to_vid /Users/nh/data/RogueTrader_1999.K4FH.avi  -m yolov5_s --weight weights/yolov5_s_coco_adamw.pth -size 640 --show
 
 ### Detect with Camera
 ```Shell
